@@ -16,7 +16,7 @@ with open("class_names.json", "r") as f:
 
 def load_image(image_data):
     image = Image.open(io.BytesIO(image_data))
-    image = image.resize((224, 224))
+    image = image.resize((128, 128))
     image_array = np.array(image)
     image_array = np.array([image_array])  # Convert single image to batch
     return image_array
